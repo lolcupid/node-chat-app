@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cupid</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="chat">
+
+<div class="chat__sidebar">
+    <h3>People</h3>
+    <div id="users"></div>
+</div>
+
+<div class="chat__main">
+    <ol id="messages" class="chat__messages"></ol>
+    <div class="chat__footer">
+        <form id="message-form">
+            <input type="text" name='message' placeholder="enter here">
+            <button>Send</button>
+        </form>
+        <button id="send-location">Send Location</button>
+    </div>
+</div>
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/libs/jquery-3.3.1.min.js"></script>
+<script src="/js/index.js"></script>
+</body>
+</html>
