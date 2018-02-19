@@ -4,6 +4,7 @@ const app = express();
 
 var {generateMsg, generateLocationMsg} = require('./utils/message');
 var publicPath = path.join(__dirname, '../public');
+var port = process.env.PORT || 3000;
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
@@ -32,9 +33,6 @@ io.on('connection', function(socket){
 });
 
 
-
-
-
-server.listen(3000, () => {
-    console.log("Server is running at 3000");
+server.listen(port, () => {
+    console.log("Server is running at" , port);
 });
